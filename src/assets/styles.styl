@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Quicksand:wght@300&display=swap');
+
+*
+  box-sizing border-box
+
+.center
+  text-align center
+
+.spacing
+  margin-top 40px
+  margin-bottom 30px
+
+.margin-bottom
+  margin-bottom 40px
+
+body
+  margin 0
+  min-height 100vh
+
+h1, h2, h3, h4, h5
+  font-family 'Quicksand'
+  font-weight 300
+  transition color ease-out 300ms
+  margin 0
+
+h1
+  font-size 36px
+  &.big
+    font-size 42px
+
+h5
+  font-family 'Montserrat'
+  font-weight 600
+  font-size 14px
+
+p
+  font-family 'Montserrat'
+  font-size 12px
+  font-weight 600
+  margin 0
+
+div#app
+  background-color #282828
+  min-height 100vh
+  display flex
+
+div.viewport
+  position relative
+  max-width 414px
+  margin 20px auto
+  border-radius 20px
+  overflow hidden
+  background #F7F7F7
+  display flex
+  flex-direction column
+  transition background ease-out 300ms
+  &.dark
+    background #350F57
+    h1
+      color white
+    div.box
+      background #8624DB
+      color white
+      &.enfasis
+        background white
+        color #8624DB
+        h1
+          color #8624DB
+
+header
+  display flex
+  justify-content space-between
+  align-items center
+  padding 35px
+
+main
+  padding 0 35px
+
+div.grid
+  display flex
+  flex-wrap wrap
+  margin-top 30px
+  justify-content space-between
+  .half
+    width calc(50% - 10px)
+
+div.box
+  background white
+  padding 25px 30px
+  border-radius 20px
+  box-shadow 0 0 10px 0 rgba(0,0,0,0.1)
+  transition all ease-out 300ms
+  margin-bottom 20px
+  width 100%
+  position relative
+  &.enfasis
+    background #8624DB
+    color white
+  &.side-by-side
+    display flex
+    justify-content space-between
+  .edit-icon
+    position absolute
+    right 30px
+
+.flex
+  display flex
+  align-items center
+  margin 20px 0
+  h5
+    width 50%
+
+.modal
+  position absolute
+  background rgba(0,0,0,0.5)
+  width 100%
+  height 100%
+  transition all ease-out 300ms
+  display flex
+  justify-content center
+  align-items center
+  &.hidden
+    visibility hidden
+    opacity 0
+    pointer-events none
+  .window
+    background white
+    width 80%
+    border-radius 30px
+    padding 30px
+    text-align center
+    input
+      height 30px
+      border 1px solid rgba(0,0,0,0.2)
+      padding 0 10px
+      border-radius 5px
+      font-size 14px
+      font-family 'Quicksand'
+      outline none
+    button
+      background-color #8624DB
+      color white
+      border none
+      padding 10px 20px
+      border-radius 20px
+      font-family 'Montserrat'
+      margin-top 30px
+      outline none
+      cursor pointer
